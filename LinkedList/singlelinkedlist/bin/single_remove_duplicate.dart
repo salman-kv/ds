@@ -40,11 +40,12 @@ removeDuplicate(){
 
     current.next=next;
 
-    if(next==tail && current.data==next?.data){
-   tail=current;
-   tail?.next=null;
+  //   if(next==tail && current.data==next?.data){
+  //     print('tail ssection');
+  //  tail=current;
+  //  tail?.next=null;
 
-    }
+  //   }
     current=next;
 
   }
@@ -52,13 +53,10 @@ removeDuplicate(){
 
 void main(){
   add(10);
+  add(10);
   add(20);
-  add(20);
-  add(20);
-  add(30);
-  add(30);
-  add(30);
-  add(30);
+  add(10);
+  add(10);
 
   removeDuplicate();
   print('head : ${head?.data}');

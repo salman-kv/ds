@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "Dart (bin/single_remove_duplicate.dart)",
+            "type": "dart",
+            "request": "launch",
+            "cwd": "LinkedList/singlelinkedlist",
+            "program": "bin/single_remove_duplicate.dart"
+        }
+    ]
+}
