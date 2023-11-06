@@ -31,8 +31,10 @@ disiplay(){
 }
 
 
+// logic
+
 revers(){
-  Node? current=head;
+Node? current=head;
 while(current?.next != tail ){
 
   Node? temp=current?.next;
@@ -52,18 +54,55 @@ if(current?.next == tail){
 
 }
 
+
+
+// other logic
+
+reversOtherLogic(){
+  Node? pre;
+  Node? current=head;
+  Node? next;
+
+  while(current != null){
+    next=current.next;
+    current.next=pre;
+    if(pre==null){
+      tail=current;
+    }
+    pre=current;
+    current=next;
+  }
+  head=pre;
+}
+
+// recursion 
+
+Node? newtemp;
+Node? reversRecursion(Node? temphead){
+      if(temphead == null ){
+    return newtemp;
+  }
+  if( temphead.next!=null){
+    print(temphead.data);
+    head=temphead;
+  }
+  reversRecursion(temphead.next)?.next=temphead;
+  // print(temphead.data);
+
+}
+
+
 void main(){
 
 addNode(10);
 addNode(20);
 addNode(30);
-addNode(40);
-addNode(50);
-addNode(40);
-addNode(50);
-// revers();
-revers();
+addNode(30);
+addNode(30);
+
+reversRecursion(head);
+
 disiplay();
-print(head?.data);
-print(tail?.data);
+print('head : ${head?.data}');
+print('tail : ${tail?.data}');
 }

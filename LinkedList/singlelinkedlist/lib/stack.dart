@@ -17,7 +17,6 @@ push(int data){
     newnode.next=top;
       top=newnode;
   }
-
 }
 
 pop(){
