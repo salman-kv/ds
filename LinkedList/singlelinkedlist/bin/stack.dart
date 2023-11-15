@@ -8,8 +8,6 @@ Node? top;
 
 push(int data){
   Node? newnode=Node(data: data);
-
- 
   if(top == null){
     top=newnode;
   }

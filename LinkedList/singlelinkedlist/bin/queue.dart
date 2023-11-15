@@ -44,10 +44,8 @@ void main(){
   enqueue(20);
   enqueue(30);
   
+  
   dequeue();
-  dequeue();
-  dequeue();
-
   display();
 
   print('front : ${front?.data}');
